@@ -1,0 +1,136 @@
+.technologies {
+  padding: 100px 70px;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+}
+
+.technologies__title {
+  margin: 0 auto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.88px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.technologies__separator {
+  margin: 23px auto 90px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+.technologies__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+}
+
+.technologies__information-title {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  margin: 0 auto 22px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.technologies__information-description {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.56px;
+  margin: 0 auto 100px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.technologies__information-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.technologies__information-list-item {
+  width: 90px;
+  padding: 21px 0 22px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+
+@media screen and (max-width: 768px) {
+  .technologies {
+    padding: 90px 50px;
+  }
+
+  .technologies__separator {
+    margin: 23px auto 80px;
+  }
+
+  .technologies__information-description {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -0.48px;
+    margin: 0 auto 83px;
+  }
+
+  .technologies__information-list-item {
+    width: 84px;
+    padding: 21px 0 21px;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+
+  .technologies__information-title {
+    margin: 0 auto 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .technologies {
+    padding: 70px 18px;
+  }
+
+  .technologies__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .technologies__separator {
+    margin: 23px auto 62px;
+  }
+
+  .technologies__information-title {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+    margin: 0 auto 24px;
+  }
+
+  .technologies__information-description {
+    font-size: 11px;
+    letter-spacing: -0.44px;
+    margin: 0 auto 50px;
+  }
+
+  .technologies__information-list {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-left: 53px;
+  }
+}

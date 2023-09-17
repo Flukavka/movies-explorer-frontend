@@ -1,0 +1,33 @@
+.movies-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 78px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.movies-card-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .movies-card-list {
+    gap: 47px 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .movies-cards {
+    row-gap: 63px;
+  }
+
+  .movies-card-list {
+    gap: 39px;
+  }
+}

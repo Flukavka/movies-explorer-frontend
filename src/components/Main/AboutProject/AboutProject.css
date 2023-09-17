@@ -1,0 +1,200 @@
+.about-project {
+  padding: 110px 70px;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.about-project__information {
+  display: flex;
+  flex-direction: column;
+  row-gap: 110px;
+}
+
+.about-project__title {
+  margin: 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.88px;
+}
+
+.about-project__separator {
+  margin: 23px auto 70px;
+}
+
+.about-project__list {
+  display: flex;
+  column-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-project__list-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+}
+
+.about-project__list-item-title {
+  margin: 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.about-project__list-item-description {
+  margin: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.about-project__infographics-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-project__infographics-list-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.about-project__infographics-list-item_backend {
+  width: 20%;
+}
+
+.about-project__infographics-list-item_frontend {
+  width: 80%;
+}
+
+.about-project__infographics-list-item-title {
+  padding: 9px 14px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.about-project__infographics-list-item-title_backend {
+  background-color: #000;
+  color: #fff;
+}
+
+.about-project__infographics-list-item-title_frontend {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.about-project__infographics-list-item-description {
+  margin: 0;
+  color: #a0a0a0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project {
+    padding: 90px 50px;
+  }
+
+  .about-project__list {
+    column-gap: 30px;
+  }
+
+  .about-project__information {
+    row-gap: 93px;
+  }
+
+  .about-project__list-item {
+    row-gap: 22px;
+  }
+
+  .about-project__list-item-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .about-project__infographics-list-item_backend {
+    width: 21%;
+  }
+
+  .about-project__infographics-list-item_frontend {
+    width: 79%;
+  }
+
+  .about-project__infographics-list-item-title {
+    padding: 9px 10px;
+  }
+
+  .about-project__infographics-list-item-description {
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about-project {
+    padding: 70px 18px;
+  }
+
+  .about-project__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .about-project__information {
+    row-gap: 64px;
+  }
+
+  .about-project__separator {
+    margin: 28px auto 60px;
+  }
+
+  .about-project__list {
+    flex-direction: column;
+    row-gap: 56px;
+  }
+
+  .about-project__list-item {
+    row-gap: 14px;
+  }
+
+  .about-project__list-item-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .about-project__list-item-description {
+    font-size: 11px;
+  }
+
+  .about-project__infographics-list-item_backend {
+    width: 35%;
+  }
+
+  .about-project__infographics-list-item_frontend {
+    width: 65%;
+  }
+
+  .about-project__infographics-list-item-title {
+    font-size: 11px;
+  }
+
+  .about-project__infographics-list-item-title {
+    padding: 10px 11px;
+  }
+
+  .about-project__infographics-list-item-description {
+    font-size: 11px;
+  }
+}
