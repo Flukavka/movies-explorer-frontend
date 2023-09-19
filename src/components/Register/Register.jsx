@@ -7,14 +7,13 @@ function Register() {
   const error = { message: "" };
 
   return (
-    <div className="register">
+    <main className="register">
       <Logo />
       <h1 className="register__title">Добро пожаловать!</h1>
       <Form name="register" buttonText="Зарегистрироваться">
-        <label className="form__label" for="input-name">
+        <label className="form__label" htmlFor="input-name">
           Имя
           <input
-            form="register"
             id="input-name"
             type="text"
             name="name"
@@ -29,10 +28,9 @@ function Register() {
           <span className="form__input-error">{error.message || ""}</span>
         </label>
 
-        <label className="form__label" for="input-email">
+        <label className="form__label" htmlFor="input-email">
           E-mail
           <input
-            form="register"
             id="input-email"
             type="email"
             name="email"
@@ -46,10 +44,9 @@ function Register() {
           <span className="form__input-error">{error.message || ""}</span>
         </label>
 
-        <label className="form__label" for="input-password">
+        <label className="form__label" htmlFor="input-password">
           Пароль
           <input
-            form="register"
             id="input-password"
             type="password"
             name="password"
@@ -69,7 +66,7 @@ function Register() {
         clarificationText={"Уже зарегистрированы?"}
         linkText="Войти"
       />
-    </div>
+    </main>
   );
 }
 

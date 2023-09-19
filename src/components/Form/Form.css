@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.form__profile {
+.form-profile {
   max-width: 410px;
   width: 100%;
 }
@@ -58,6 +58,7 @@
 
 .form__input-profile:focus-visible {
   outline: none;
+  border-bottom: inset 1px #000;
 }
 
 .form__input_error_style {
@@ -89,7 +90,7 @@
   outline: 1px solid #000;
 }
 
-.form-submit {
+.form__submit {
   border-radius: 3px;
   background: #000;
   border: none;
@@ -105,27 +106,27 @@
   transition: opacity 0.4s linear;
 }
 
-.form-submit:hover {
+.form__submit:hover {
   opacity: 0.8;
 }
 
-.form-submit__login {
+.form__submit-login {
   margin-top: 154px;
 }
 
-.form-submit__profile {
+.form__submit-profile {
   align-self: center;
   margin: 204px auto 16px;
   background: #3456f3;
 }
 
-.form-submit__profile_button_disabled {
+.form__submit-profile_button_disabled {
   background: #f8f8f8;
   color: #c2c2c2;
   margin: 20px auto 0;
 }
 
-.form-submit__profile_display_none {
+.form__submit-profile_display_none {
   display: none;
 }
 
@@ -134,14 +135,15 @@
     width: 260px;
   }
 
-  .form-submit {
+  .form__submit {
     padding: 15px 68px 15px 67px;
     font-size: 12px;
     margin-top: 157px;
   }
 
-  .form-submit__login {
+  .form__submit-login {
     margin-top: 246px;
+    padding: 15px 106px 15px 110px;
   }
 
   .form__input {

@@ -5,7 +5,8 @@
 }
 
 .card__image {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 201px;
   object-fit: cover;
   border-radius: 6px;
@@ -17,6 +18,12 @@
   top: 14px;
   right: 14px;
   border: none;
+  opacity: 1;
+  transition: opacity 0.4s linear;
+}
+
+.card__button:hover {
+  opacity: 0.8;
 }
 
 .card__button-save {
@@ -45,11 +52,21 @@
   display: none;
 }
 
+.card__button-delete {
+  background: center no-repeat url(../../../images/icon__delete.svg);
+  width: 21px;
+  height: 21px;
+}
+
+.card__button-delete_display_none {
+  display: none;
+}
+
 .card__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 14px;
+  padding: 14px 14px 0;
 }
 
 .card__title {
@@ -74,23 +91,29 @@
 
 @media screen and (max-width: 900px) {
   .card__image {
-    width: 339px;
+    max-width: 339px;
     height: 190px;
   }
 
   .card__description {
     margin-top: 25px;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 425px) {
   .card__image {
-    width: 300px;
+    max-width: 300px;
     height: 168px;
   }
 
+  .card__button {
+    top: 10px;
+    right: 10px;
+  }
+
   .card__description {
-    margin-top: 16px;
+    margin-top: 15px;
   }
 
   .card__title {

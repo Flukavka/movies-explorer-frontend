@@ -25,7 +25,15 @@
   font-weight: 500;
 }
 
-.unlogged-nav__button {
+.unlogged-nav__link-signin {
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
   background-color: #000;
   border: none;
   cursor: pointer;
@@ -33,22 +41,9 @@
   transition: opacity 0.4s linear;
 }
 
-.unlogged-nav__button:hover {
+
+.unlogged-nav__link-signin:hover {
   opacity: 0.8;
-}
-
-.unlogged-nav__button_signin {
-  border-radius: 3px;
-  padding: 8px 20px;
-}
-
-.unlogged-nav__button-link {
-  color: #fff;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.3;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 425px) {
@@ -61,7 +56,7 @@
     line-height: 1.6;
   }
 
-  .unlogged-nav__button_signin {
+  .unlogged-nav__link-signin {
     padding: 5px 12px;
     font-size: 10px;
     line-height: 1.6;

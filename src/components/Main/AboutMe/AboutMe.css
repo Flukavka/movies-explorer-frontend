@@ -1,5 +1,5 @@
 .about-me {
-  padding: 110px 70px 101px;
+  padding: 113px 70px 101px;
   max-width: 1140px;
   margin: 0 auto;
   color: #000;
@@ -14,10 +14,6 @@
   letter-spacing: -0.88px;
 }
 
-.about-me__separator {
-  margin: 23px auto 66px;
-}
-
 .about-me-info {
   display: grid;
   grid-template-areas: "name photo"
@@ -25,6 +21,9 @@
     "bio photo"
     "link photo";
   grid-template-rows: 80px 45px 152px;
+  border-top: 1px solid #000;
+  margin-top: 23px;
+  padding-top: 66px;
 }
 
 .about-me-info__name {
@@ -126,10 +125,6 @@
     letter-spacing: -0.72px;
   }
 
-  .about-me__separator {
-    margin: 28px auto 59px;
-  }
-
   .about-me-info {
     grid-template-areas: "photo"
       "name"
@@ -137,6 +132,8 @@
       "bio"
       "link";
     grid-template-rows: 392px 56px 36px 152px;
+    margin-top: 28px;
+    padding-top: 59px;
   }
 
   .about-me-info__name {

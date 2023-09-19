@@ -9,11 +9,12 @@
   cursor: pointer;
   padding: 11px 147px;
   border: none;
+  align-self: center;
 }
 
 @media screen and (max-width: 768px) {
   .movies-cards__button {
-    padding: 11px 147px;
+    padding: 11px 150px;
   }
 }
 

@@ -8,13 +8,12 @@ function SavedMovies() {
   return (
     <>
       <Header />
-      <section className="movies">
+      <main className="movies movies-saved">
         <div className="movies__wrapper">
           <SearchForm />
-          <hr className="movies__separator" />
           <MoviesCardList />
         </div>
-      </section>
+      </main>
       <Footer />
     </>
   );

@@ -8,11 +8,12 @@ function Movies() {
   return (
     <>
       <Header />
-      <section className="movies">
-        <SearchForm />
-        <hr className="movies__separator" />
-        <MoviesCardList />
-      </section>
+      <main>
+        <section className="movies">
+          <SearchForm />
+          <MoviesCardList />
+        </section>
+      </main>
       <Footer />
     </>
   );

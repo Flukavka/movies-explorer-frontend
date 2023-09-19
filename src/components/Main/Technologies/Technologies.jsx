@@ -5,8 +5,6 @@ function Technologies() {
     <section id="technologies-section" className="technologies">
       <h2 className="technologies__title">Технологии</h2>
 
-      <hr className="technologies__separator" />
-
       <article className="technologies__information">
         <h3 className="technologies__information-title">7 технологий</h3>
 

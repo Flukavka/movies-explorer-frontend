@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
-  margin: 74px auto 123px;
+  margin: 74px auto 106px;
 }
 
 .profile__button-change {
@@ -66,4 +66,29 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__title {
+    margin: 231px auto 78px;
+  }
+
+  .profile__button-change {
+    margin: 193px auto 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__title {
+    margin: 66px auto 62px;
+  }
+
+  .profile__button-change {
+    margin: 361px auto 16px;
+    font-size: 12px;
+  }
+
+  .profile__signout {
+    font-size: 12px;
+  }
 }

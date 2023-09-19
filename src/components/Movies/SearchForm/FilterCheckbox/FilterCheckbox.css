@@ -11,6 +11,12 @@
   position: relative;
   cursor: pointer;
   margin-left: 29px;
+  opacity: 1;
+  transition: opacity 0.4s linear;
+}
+
+.checkbox:hover {
+  opacity: 0.8;
 }
 
 .checkbox__inner {
@@ -59,11 +65,24 @@
   line-height: 1.4;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+  .checkbox {
+    margin-left: 22px;
+  }
+
+  .filter__name {
+    margin: 0 20px 0 14px;
+  }
+}
+
+@media screen and (max-width: 530px) {
   .filter {
     border: none;
     min-height: 0;
     margin-top: 45px;
+    position: absolute;
+    top: 68px;
+    left: 27%;
   }
 
   .checkbox {

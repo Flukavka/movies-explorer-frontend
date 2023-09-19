@@ -6,8 +6,6 @@ function AboutMe() {
     <section id="author-section" className="about-me">
       <h2 className="about-me__title">Студент</h2>
 
-      <hr className="about-me__separator" />
-
       <article className="about-me-info">
         <h3 className="about-me-info__name">Виктория</h3>
 

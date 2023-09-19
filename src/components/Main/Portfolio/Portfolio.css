@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 0 70px 125px;
+  padding: 0 70px 169px;
   display: flex;
   flex-direction: column;
   row-gap: 50px;
@@ -44,14 +44,15 @@
   color: #000;
 }
 
-.portfolio-list-item__separator {
-  margin: 19px 0 20px;
-  border: #e8e8e8 1px solid;
+.portfolio-list-item:not(:last-of-type) {
+  border-bottom: #e8e8e8 1px solid;
+  margin-bottom: 19px;
+  padding-bottom: 19px;
 }
 
 @media screen and (max-width: 768px) {
   .portfolio {
-    padding: 0 50px 97px;
+    padding: 0 50px 142px;
   }
 
   .portfolio-list-item__link {
@@ -67,7 +68,7 @@
 
 @media screen and (max-width: 425px) {
   .portfolio {
-    padding: 0 14px 78px;
+    padding: 0 14px 119px;
     row-gap: 40px;
   }
 

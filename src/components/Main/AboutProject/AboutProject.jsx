@@ -5,8 +5,6 @@ function AboutProject() {
     <section id="project-section" className="about-project">
       <h2 className="about-project__title">О проекте</h2>
 
-      <hr className="about-project__separator" />
-
       <div className="about-project__information">
         <ul className="about-project__list">
           <li className="about-project__list-item">
@@ -34,9 +32,9 @@ function AboutProject() {
 
         <ul className="about-project__infographics-list">
           <li className="about-project__infographics-list-item about-project__infographics-list-item_backend">
-            <div className="about-project__infographics-list-item-title about-project__infographics-list-item-title_backend">
+            <p className="about-project__infographics-list-item-title about-project__infographics-list-item-title_backend">
               1 неделя
-            </div>
+            </p>
 
             <p className="about-project__infographics-list-item-description">
               Back-end
@@ -44,9 +42,9 @@ function AboutProject() {
           </li>
 
           <li className="about-project__infographics-list-item about-project__infographics-list-item_frontend">
-            <div className="about-project__infographics-list-item-title about-project__infographics-list-item-title_frontend">
+            <p className="about-project__infographics-list-item-title about-project__infographics-list-item-title_frontend">
               4 недели
-            </div>
+            </p>
 
             <p className="about-project__infographics-list-item-description">
               Front-end

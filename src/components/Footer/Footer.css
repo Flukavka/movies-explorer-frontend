@@ -64,7 +64,7 @@
   }
 
   .footer__description {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .footer__separator {
@@ -75,6 +75,10 @@
 @media screen and (max-width: 425px) {
   .footer {
     padding: 32px 10px 20px;
+  }
+
+  .footer__description {
+    font-size: 12px;
   }
 
   .footer__separator {

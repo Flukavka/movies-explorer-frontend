@@ -15,18 +15,15 @@
   max-width: 1140px;
 }
 
-.technologies__separator {
-  margin: 23px auto 90px;
-  width: 100%;
-  max-width: 1140px;
-}
-
 .technologies__information {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #000;
   text-align: center;
+  border-top: 1px solid #000;
+  margin-top: 26px;
+  padding-top: 90px;
 }
 
 .technologies__information-title {
@@ -73,20 +70,23 @@
   letter-spacing: -0.56px;
 }
 
-@media screen and (max-width: 768px) {
-  .technologies {
-    padding: 90px 50px;
-  }
-
-  .technologies__separator {
-    margin: 23px auto 80px;
-  }
-
+@media screen and (max-width: 900px) {
   .technologies__information-description {
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: -0.48px;
     margin: 0 auto 83px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .technologies {
+    padding: 90px 50px;
+  }
+
+  .technologies__information {
+    margin-top: 23px;
+    padding-top: 80px;
   }
 
   .technologies__information-list-item {
@@ -101,6 +101,15 @@
   }
 }
 
+@media screen and (max-width: 680px) {
+  .technologies__information-list {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-left: 53px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .technologies {
     padding: 70px 18px;
@@ -111,8 +120,8 @@
     letter-spacing: -0.72px;
   }
 
-  .technologies__separator {
-    margin: 23px auto 62px;
+  .technologies__information {
+    padding-top: 62px;
   }
 
   .technologies__information-title {
@@ -125,12 +134,5 @@
     font-size: 11px;
     letter-spacing: -0.44px;
     margin: 0 auto 50px;
-  }
-
-  .technologies__information-list {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-start;
-    margin-left: 53px;
   }
 }

@@ -9,13 +9,15 @@ function SearchForm() {
         <input
           className="search-form__input search-form__input_icon"
           type="text"
+          required
           placeholder="Фильм"
         />
         <button className="search-form__button" type="submit">
           Найти
         </button>
+
+        <FilterCheckbox />
       </form>
-      <FilterCheckbox />
     </section>
   );
 }

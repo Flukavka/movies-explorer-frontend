@@ -5,16 +5,16 @@ function Form({ name, buttonText, error, isVisibleButton, ...props }) {
   const location = useLocation();
 
   return (
-    <form className={`form form__${name}`}>
+    <form className={`form form-${name}`}>
       {props.children}
 
       <button
         type="submit"
-        className={`form-submit form-submit__${name} ${
-          error ? "form-submit__profile_button_disabled" : ""
+        className={`form__submit form__submit-${name} ${
+          error ? "form__submit-profile_button_disabled" : ""
         } ${
           location.pathname === "/profile" && isVisibleButton === false
-            ? "form-submit__profile_display_none"
+            ? "form__submit-profile_display_none"
             : ""
         }`}
         disabled={error ? true : false}

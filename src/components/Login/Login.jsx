@@ -7,14 +7,13 @@ function Login() {
   const error = { message: "" };
 
   return (
-    <div className="login">
+    <main className="login">
       <Logo />
       <h1 className="login__title">Рады видеть!</h1>
       <Form name="login" buttonText="Войти">
-        <label className="form__label" for="input-email">
+        <label className="form__label" htmlFor="input-email">
           E-mail
           <input
-            form="login"
             id="input-email"
             type="email"
             name="email"
@@ -28,10 +27,9 @@ function Login() {
           <span className="form__input-error">{error.message || ""}</span>
         </label>
 
-        <label className="form__label" for="input-password">
+        <label className="form__label" htmlFor="input-password">
           Пароль
           <input
-            form="login"
             id="input-password"
             type="password"
             name="password"
@@ -51,7 +49,7 @@ function Login() {
         clarificationText={"Ещё не зарегистрированы?"}
         linkText="Регистрация"
       />
-    </div>
+    </main>
   );
 }
 

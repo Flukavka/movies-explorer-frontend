@@ -23,7 +23,6 @@ function Portfolio() {
                 alt="Иконка стрелочка"
               />
             </a>
-            <hr className="portfolio-list-item__separator" />
           </li>
 
           <li className="portfolio-list-item">
@@ -41,7 +40,6 @@ function Portfolio() {
                 alt="Иконка стрелочка"
               />
             </a>
-            <hr className="portfolio-list-item__separator" />
           </li>
 
           <li className="portfolio-list-item">
@@ -61,7 +59,6 @@ function Portfolio() {
                 alt="Иконка стрелочка"
               />
             </a>
-            <hr className="portfolio-list-item__separator" />
           </li>
         </ul>
       </article>

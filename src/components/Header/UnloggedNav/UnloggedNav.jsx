@@ -15,11 +15,9 @@ function UnloggedNav() {
         </li>
 
         <li>
-          <button className="unlogged-nav__button unlogged-nav__button_signin">
-            <NavLink to="/signin" className="unlogged-nav__button-link">
-              Войти
-            </NavLink>
-          </button>
+          <NavLink to="/signin" className="unlogged-nav__link-signin">
+            Войти
+          </NavLink>
         </li>
       </ul>
     </nav>

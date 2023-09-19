@@ -19,9 +19,10 @@ function LoggedNav({ currentUser }) {
   return (
     <>
       <Overlay isBurgerMenuOpen={isBurgerMenuOpen} />
-      <div className="logged-block">
+      <div>
         <button
-          className="logged-block__burger"
+          type="button"
+          className="logged-nav-burger"
           onClick={handleOpenBurgerMenu}
         ></button>
         <nav
@@ -31,8 +32,9 @@ function LoggedNav({ currentUser }) {
         >
           <ul className="logged-nav__list">
             {/* кнопка закрытия бургерного меню */}
-            <li className="logged-nav__list-item logged-nav__list-item_align_right">
+            <li className="logged-nav__list-item logged-nav__list-item_align">
               <button
+                type="button"
                 className={`logged-nav__button-close ${
                   isBurgerMenuOpen
                     ? "logged-nav__button-close_display_flex"
@@ -72,8 +74,8 @@ function LoggedNav({ currentUser }) {
               </NavLink>
             </li>
 
+            {/* ссылка на сохраненные пользователем фильмы */}
             <li className="logged-nav__list-item">
-              {/* ссылка на сохраненные пользователем фильмы TODO */}
               <NavLink
                 to="/saved-movies"
                 className={`logged-nav__link logged-nav__link_movies ${
@@ -87,14 +89,20 @@ function LoggedNav({ currentUser }) {
             </li>
           </ul>
 
-          <li className="logged-nav__profile">
-            <p className="logged-nav__profile-email">{currentUser.email}</p>
+          <ul className="logged-nav__list">
+            <li className="logged-nav__profile">
+              <a
+                className="logged-nav__profile-email"
+                href={`mailto:${currentUser.email}`}
+              >
+                {currentUser.email}
+              </a>
 
-            <NavLink to="/profile">
-              <button
-                className={`logged-nav__button logged-nav__button-profile ${
+              <NavLink
+                to="/profile"
+                className={`logged-nav__link-profile ${
                   isBurgerMenuOpen || location.pathname !== "/"
-                    ? "logged-nav__button-profile_color_gray"
+                    ? "logged-nav__link-profile_color_gray"
                     : ""
                 }`}
               >
@@ -116,9 +124,9 @@ function LoggedNav({ currentUser }) {
                     clipRule="evenodd"
                   />
                 </svg>
-              </button>
-            </NavLink>
-          </li>
+              </NavLink>
+            </li>
+          </ul>
         </nav>
       </div>
     </>

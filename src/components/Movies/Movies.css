@@ -1,5 +1,5 @@
 .movies {
-  padding: 70px;
+  padding: 70px 70px 122px;
   flex: 1 1 auto;
 }
 
@@ -9,29 +9,14 @@
   margin: 0 auto;
 }
 
-.movies__separator {
-  margin: 69px auto 80px;
-  border: 1px solid #e8e8e8;
-  max-width: 1140px;
-  width: 100%;
-}
-
 @media screen and (max-width: 900px) {
   .movies {
-    padding: 80px 30px;
-  }
-
-  .movies__separator {
-    margin: 109px auto 80px;
+    padding: 76px 30px 124px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .movies {
-    padding: 80px 10px 124px;
-  }
-
-  .movies__separator {
-    margin: 45px auto 50px;
+    padding: 80px 10px 128px;
   }
 }
