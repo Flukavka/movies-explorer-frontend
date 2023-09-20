@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.logged-nav__link-main {
+  display: none;
+}
+
 .logged-nav__button-close {
   border: none;
   background: center center / cover no-repeat url(../../../images/icon__close.svg);
@@ -26,10 +30,6 @@
 
 .logged-nav__button-close:hover {
   opacity: 0.8;
-}
-
-.logged-nav__button-close_display_flex {
-  display: flex;
 }
 
 .logged-nav__profile {
@@ -73,10 +73,6 @@
   opacity: 0.8;
 }
 
-.logged-nav__link-profile_color_gray {
-  background-color: #f9f9f9;
-}
-
 .logged-nav__link {
   color: #000;
   text-decoration: none;
@@ -103,7 +99,15 @@
   font-weight: 500;
 }
 
-.logged-nav__profile-icon_fill_pink {
+.logged-nav__link-profile_color_gray {
+  background-color: #f9f9f9;
+}
+
+.logged-nav__profile-icon_fill_black {
+  fill: #000;
+}
+
+.logged-nav__profile-icon_fill_main {
   fill: #f3c1f8;
 }
 
@@ -127,6 +131,10 @@
     opacity: 0.8;
   }
 
+  .logged-nav-burger:focus-visible {
+    outline: none;
+  }
+
   .logged-nav {
     position: absolute;
     top: 0;
@@ -141,8 +149,13 @@
     box-sizing: border-box;
   }
 
+  .logged-nav__link-main {
+    display: block;
+  }
+
   .logged-nav__list {
     flex-direction: column;
+    text-align: center;
   }
 
   .logged-nav__profile {
@@ -179,6 +192,18 @@
 
   .logged-nav__link_all-movies {
     margin: 0;
+  }
+
+  .logged-nav__button-close_display_flex {
+    display: flex;
+  }
+
+  .logged-nav__profile-icon_fill_main {
+    fill: #000;
+  }
+
+  .logged-nav__link-profile_color {
+    background-color: #f9f9f9;
   }
 }
 

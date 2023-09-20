@@ -16,6 +16,30 @@ function LoggedNav({ currentUser }) {
     burgerMenuState(false);
   }
 
+  /* useEffect(() => {
+    function closeByEscape(evt) {
+      if (evt.key === "Escape") {
+        burgerMenuState(false);
+      }
+    }
+    function closeByOverlay(evt) {
+      if (evt.target.classList.contains("overlay")) {
+        burgerMenuState(false);
+      }
+    }
+
+    if (isBurgerMenuOpen) {
+      // Навешиваем только при открытии
+      document.addEventListener("keydown", closeByEscape);
+      document.addEventListener("mousedown", closeByOverlay);
+      // Удаляем
+      return () => {
+        document.removeEventListener("keydown", closeByEscape);
+        document.removeEventListener("mousedown", closeByOverlay);
+      };
+    }
+  }, [isBurgerMenuOpen]); */
+
   return (
     <>
       <Overlay isBurgerMenuOpen={isBurgerMenuOpen} />
@@ -49,7 +73,7 @@ function LoggedNav({ currentUser }) {
               <li className="logged-nav__list-item">
                 <NavLink
                   to="/"
-                  className={`logged-nav__link ${
+                  className={`logged-nav__link logged-nav__link-main ${
                     location.pathname === "/" ? "logged-nav__link_active" : ""
                   }`}
                 >
@@ -100,8 +124,12 @@ function LoggedNav({ currentUser }) {
 
               <NavLink
                 to="/profile"
-                className={`logged-nav__link-profile ${
+                className=/* {`logged-nav__link-profile ${
                   isBurgerMenuOpen || location.pathname !== "/"
+                    ? "logged-nav__link-profile_color_gray"
+                    : ""
+                }`} */ {`logged-nav__link-profile logged-nav__link-profile_color${
+                  location.pathname !== "/"
                     ? "logged-nav__link-profile_color_gray"
                     : ""
                 }`}
@@ -113,12 +141,11 @@ function LoggedNav({ currentUser }) {
                   fill="none"
                 >
                   <path
-                    className={`logged-nav__profile-icon ${
-                      location.pathname === "/" && !isBurgerMenuOpen
-                        ? "logged-nav__profile-icon_fill_pink"
+                    className={`logged-nav__profile-icon logged-nav__profile-icon_fill_black ${
+                      location.pathname === "/"
+                        ? "logged-nav__profile-icon_fill_main"
                         : ""
                     }`}
-                    fill="#000"
                     fillRule="evenodd"
                     d="M7.43 7.967a3.751 3.751 0 1 0-2.86 0A8.614 8.614 0 0 0 .809 9.58L2.19 11.42A6.317 6.317 0 0 1 6 10.149c1.431 0 2.749.473 3.81 1.27l1.382-1.839A8.614 8.614 0 0 0 7.43 7.967Z"
                     clipRule="evenodd"
