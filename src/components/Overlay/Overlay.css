@@ -6,4 +6,11 @@
   opacity: 0.3;
   height: 100vh;
   width: 100vw;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    display: block;
+  }
 }
