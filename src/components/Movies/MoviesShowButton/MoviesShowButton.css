@@ -1,0 +1,25 @@
+.movies-cards__button {
+  border-radius: 6px;
+  background: #f9f9f9;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  padding: 11px 147px;
+  border: none;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-cards__button {
+    padding: 11px 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movies-cards__button {
+    padding: 11px 110px;
+  }
+}

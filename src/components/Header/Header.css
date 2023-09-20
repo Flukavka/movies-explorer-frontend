@@ -1,0 +1,25 @@
+.header_color_pink {
+  background-color: #F3C1F8;
+}
+
+.header__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+@media screen and (max-width: 768px) {
+  .header__wrapper {
+    padding: 18px 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__wrapper {
+    padding: 18px 14px;
+  }
+}
