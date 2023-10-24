@@ -251,7 +251,9 @@ function App() {
                 )
               }
             />
-            <Route path={"*"} element={<NotFound />} />
+
+            <Route path={"*"} element={<ProtectedRoute path="*" loggedIn={!isLoggedIn} component={NotFound} />} />
+
             <Route
               path={"/movies"}
               element={

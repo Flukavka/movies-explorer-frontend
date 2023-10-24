@@ -32,6 +32,8 @@
   cursor: pointer;
   color: #000;
   transition: 0.5s ease-in-out;
+  background: transparent;
+  border: none;
 }
 
 .not-found__button:hover {
