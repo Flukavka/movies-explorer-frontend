@@ -14,4 +14,4 @@ https://github.com/Flukavka/movies-explorer-frontend/pull/1
 
 Frontend https://nosarevavs.nomoredomainsicu.ru
 
-IP 158.160.113.218
+IP 51.250.11.231
