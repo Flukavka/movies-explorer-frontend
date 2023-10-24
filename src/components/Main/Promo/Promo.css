@@ -1,39 +1,83 @@
 .promo {
-  /* background: center center / cover no-repeat url(../../../images/promo__image.svg); */
-  background: no-repeat center 40% url(../../../images/promo__image.svg) #f3c1f8;
-  padding: 184px 0 224px;
+  background: #f3c1f8;
+}
+
+.promo__wrappers {
+  position: relative;
+  box-sizing: border-box;
+  background: #f3c1f8;
+  min-height: 524px;
+  padding: 82px 0 122px 0;
+}
+
+.promo__wrapper {
+  background-image: url(../../../images/practicum-logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .promo__title {
-  margin: 0 auto;
-  color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.16;
+  line-height: 58px; /* 116% */
   letter-spacing: -2px;
-  text-align: center;
-  width: 100%;
   max-width: 730px;
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .promo {
-    padding: 326px 0 336px;
-    background: no-repeat center 48% url(../../../images/promo__image.svg) #f3c1f8;
+@media screen and (max-width: 1023px) {
+  .promo__title {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .promo__wrappers {
+    position: relative;
+    box-sizing: border-box;
+    background: #f3c1f8;
+    min-height: 524px;
+    padding: 224px 0 240px 0;
   }
 }
 
-@media screen and (max-width: 425px) {
-  .promo {
-    padding: 204px 0 246px;
-    background: no-repeat center 43% / 245px 254px url(../../../images/promo__image.svg) #f3c1f8;
+@media screen and (max-width: 767px) {
+  .promo__wrappers {
+    padding: 224px 0 244px;
+  }
+  .promo__title {
+    margin-top: 44px;
+    max-width: 300px;
+    font-size: 29px;
+    line-height: 38px;
+    margin: 0 0 -13px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__wrappers {
+    padding: 142px 0 188px;
+  }
+
+  .promo__wrapper {
+    height: 240px;
+    background-size: contain;
   }
 
   .promo__title {
     font-size: 31px;
-    line-height: 1.24;
+    font-weight: 400;
+    line-height: 39px;
     letter-spacing: -1.24px;
-    max-width: 300px;
+    margin: 0 0 -8px 0;
   }
 }

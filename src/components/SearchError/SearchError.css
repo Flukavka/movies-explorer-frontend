@@ -1,0 +1,35 @@
+.search__error {
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #a0a0a0;
+}
+
+.search__form-error {
+  position: absolute;
+  top: 120px;
+  left: 40%;
+  color: #ff004d;
+}
+
+@media screen and (max-width: 755px) {
+  .search__form-error {
+    width: 300px;
+    top: 128px;
+    left: 27%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .search__form-error {
+    top: 158px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .search__form-error {
+    left: 18%;
+  }
+}

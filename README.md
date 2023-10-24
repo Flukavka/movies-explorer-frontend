@@ -1,9 +1,17 @@
-# movies-explorer-frontend
+### Ссылка на репозиторий
 
-Здесь хранится интерфейс приложения на «Реакте».
+https://github.com/Flukavka/movies-explorer-frontend
 
-# макет в Figma
+### Название макета в фигме:
 
-Макет - light-4
+- light-4
 
-https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/light-1?type=design&node-id=1-2798&mode=design&t=xtNChO2Qw57JJk8Y-0
+### Ссылка на пулреквест
+
+https://github.com/Flukavka/movies-explorer-frontend/pull/1
+
+### Frontend и IP
+
+Frontend https://nosarevavs.nomoredomainsicu.ru
+
+IP 158.160.113.218
