@@ -1,3 +1,5 @@
+import { MAX_SHORT_MOVIE_DURATION, MAX_MOVIE_DURATION } from "./constants";
+
 // Функция проверки ответа сервера
 export const handleCheckResponse = (res) => {
   if (res.ok) {
@@ -21,13 +23,13 @@ export function filterMovies(movies, query) {
 
 // Длительность фильмов
 export function filterDurationMovies(movies) {
-  return movies.filter((movie) => movie.duration < 40);
+  return movies.filter((movie) => movie.duration < MAX_SHORT_MOVIE_DURATION);
 }
 
 // Функция formatDurationMovies принимает значение длительности duration
 // в минутах и конвертирует его в формат часы и минуты
 export function formatDurationMovies(duration) {
-  const hours = Math.floor(duration / 60);
-  const minutes = duration % 60;
+  const hours = Math.floor(duration / MAX_MOVIE_DURATION);
+  const minutes = duration % MAX_MOVIE_DURATION;
   return `${hours}ч${minutes}м`;
 }
