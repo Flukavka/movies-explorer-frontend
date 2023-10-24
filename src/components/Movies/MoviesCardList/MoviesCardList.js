@@ -65,7 +65,7 @@ function MoviesCardList({
   // в котором изначально заданы функцией handleShowFilmsDisplay
   useEffect(() => {
     handleShowFilmsDisplay();
-  }, []);
+  }, [cards]);
 
   return (
     <section className="cards">
