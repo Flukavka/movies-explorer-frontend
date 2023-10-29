@@ -17,21 +17,35 @@ function Movies({ loggedIn, savedMovies, handleLikeFilm, onDeleteCard }) {
   const [isReqError, setisReqError] = useState(false);
   const [isNotFound, setIsNotFound] = useState(false);
 
-  // Функция для фильтрации фильмов
+  // Функция для фильтрации фильмов, аргументы- массив с фильмами, строка поискового
+  // запроса, булевое значение короткометражка или нет
   function handleFilterMovie(movies, query, short) {
     const moviesFilmList = filterMovies(movies, query, short);
+
+    // Если короткометражка (чекбокс true), то запускает функцию фильтрации
+    // длительности фильмов
     setFilteredMovies(
       short ? filterDurationMovies(moviesFilmList) : moviesFilmList
     );
+
+    // Сохраняем в локал сторадже массив с всеми фильмами и массив
+    // с отфильрованными фильмами
     localStorage.setItem("movies", JSON.stringify(moviesFilmList));
     localStorage.setItem("allMovies", JSON.stringify(movies));
   }
 
-  // Функция поиска фильмов
+  // Функция поиска фильмов, аргумент из SearchForm
   function setSearchQueryValue(query) {
+
+    //сохраняет в сторадже строку поискового запроса
     localStorage.setItem("movieSearch", query);
+    //сохраняет в сторадже строку - булевое значение чекбокса
     localStorage.setItem("shortMovies", isShortMovies);
+
+
     if (localStorage.getItem("allMovies")) {
+
+      // массив со всеми фильмами
       const movies = JSON.parse(localStorage.getItem("allMovies"));
       handleFilterMovie(movies, query, isShortMovies);
     } else {
@@ -52,10 +66,12 @@ function Movies({ loggedIn, savedMovies, handleLikeFilm, onDeleteCard }) {
     }
   }
 
+  // TODO строка запроса должна идти не из локал стораджа, а должно считываться
+  // значение инпута или должно происходить обновление значения инпута в локал сторадже
   function handleToggleShortMovies() {
     setisShortMovies(!isShortMovies);
-    const query = localStorage.getItem("movieSearch");
-    const movies = localStorage.getItem("allMovies");
+    const query = localStorage.getItem("movieSearch"); // поисковый запрос
+    const movies = localStorage.getItem("allMovies"); // все фильмы
     if (movies && query) handleFilterMovie(JSON.parse(movies), query, !isShortMovies);
     localStorage.setItem("shortMovies", !isShortMovies);
   }
@@ -77,6 +93,7 @@ function Movies({ loggedIn, savedMovies, handleLikeFilm, onDeleteCard }) {
     setisShortMovies(localStorage.getItem("shortMovies") === "true");
   }, []);
 
+  // Получение отфильтрованного массива фильмов
   useEffect(() => {
     if (localStorage.getItem("movieSearch")) {
       setIsNotFound(filteredMovies.length === 0);
@@ -92,6 +109,7 @@ function Movies({ loggedIn, savedMovies, handleLikeFilm, onDeleteCard }) {
         isShortMovies={isShortMovies}
         setSearchQueryValue={setSearchQueryValue}
         onFilterMovies={handleToggleShortMovies}
+
       />
       <MoviesCardList
         cards={filteredMovies}

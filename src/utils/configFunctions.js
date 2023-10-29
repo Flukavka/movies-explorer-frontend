@@ -8,7 +8,8 @@ export const handleCheckResponse = (res) => {
   return Promise.reject(`Error: ${res.status}`);
 };
 
-// Короткометражки
+// Аргументы массив с всеми фильмами и строка поисковый запрос
+// функция возвращает отфильтрованную выборку фильмов
 export function filterMovies(movies, query) {
   const moviesQuery = movies.filter((movie) => {
     const movieRu = String(movie.nameRU).toLowerCase().trim();

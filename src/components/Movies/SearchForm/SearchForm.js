@@ -4,15 +4,21 @@ import FilterCheckbox from "../SearchForm/FilterCheckbox/FilterCheckbox";
 import { SEARCH_ERROR_TEXT } from "../../../utils/constants";
 import "./SearchForm.css";
 
-function SearchForm({ setSearchQueryValue, onFilterMovies, isShortMovies }) {
+function SearchForm({
+  setSearchQueryValue,
+  onFilterMovies,
+  isShortMovies,
+}) {
   const location = useLocation();
 
   // Отслеживание ошибки при запросе
   const [isQueryError, setIsQueryError] = useState(false);
 
-  // [ХранениНИЕ введенного запроса поиска фильмов
+  // Хранение введенного запроса поиска фильмов
   const [query, setQuery] = useState("");
+  console.log(query);
 
+  // Получает значение поискового запроса из локал стораджа
   useEffect(() => {
     if (
       location.pathname === "/movies" &&
@@ -23,9 +29,12 @@ function SearchForm({ setSearchQueryValue, onFilterMovies, isShortMovies }) {
     }
   }, [location]);
 
+  // При сабмите проверяет поисковой запрос, либо выдаёт ошибку,
+  // либо запускает функцию поиска фильмов, передавая аргументом поисковой запрос
+  // значение строк query
   function setEditUserInfo(event) {
     event.preventDefault();
-    if (query.trim().length === 0) {
+    if (query.trim().length === 0) { // возвращает строку с вырезанными пробельными символами с её концов
       setIsQueryError(true);
     } else {
       setIsQueryError(false);
@@ -33,6 +42,7 @@ function SearchForm({ setSearchQueryValue, onFilterMovies, isShortMovies }) {
     }
   }
 
+  // Устанавливает значение query, строка инпута поисковика
   function handleQueryInputChange(event) {
     setQuery(event.target.value);
   }
@@ -54,6 +64,8 @@ function SearchForm({ setSearchQueryValue, onFilterMovies, isShortMovies }) {
         <FilterCheckbox
           isShortMovies={isShortMovies}
           onFilterMovies={onFilterMovies}
+          query={query}
+          setSearchQueryValue={setSearchQueryValue}
         />
         {isQueryError && (
           <span className="search__form-error">{SEARCH_ERROR_TEXT}</span>
