@@ -66,8 +66,6 @@ function Movies({ loggedIn, savedMovies, handleLikeFilm, onDeleteCard }) {
     }
   }
 
-  // TODO строка запроса должна идти не из локал стораджа, а должно считываться
-  // значение инпута или должно происходить обновление значения инпута в локал сторадже
   function handleToggleShortMovies() {
     setisShortMovies(!isShortMovies);
     const query = localStorage.getItem("movieSearch"); // поисковый запрос

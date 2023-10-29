@@ -16,7 +16,6 @@ function SearchForm({
 
   // Хранение введенного запроса поиска фильмов
   const [query, setQuery] = useState("");
-  console.log(query);
 
   // Получает значение поискового запроса из локал стораджа
   useEffect(() => {
